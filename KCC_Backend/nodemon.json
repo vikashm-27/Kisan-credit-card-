@@ -1,0 +1,26 @@
+{
+  "watch": [
+    "routes",
+    "controller",
+    "models",
+    "middleware",
+    "db",
+    "utils",
+    "app.js",
+    "logger.js",
+    "passport.js"
+  ],
+  "ext": "js,json,env",
+  "ignore": [
+    "logs/*",
+    "upload/*",
+    "data/*",
+    "assests/*",
+    "output/*",
+    "combined.log",
+    "*.log",
+    "node_modules/*",
+    "dist/*"
+  ],
+  "delay": "1000"
+}

@@ -1,0 +1,840 @@
+/* ====================================
+   SHARED VERIFICATION FORM STYLES
+   Common design system for all KYC pages
+   ==================================== */
+
+/* ---- Page Container ---- */
+.vf-page {
+    min-height: 100%;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---- Page Header ---- */
+.vf-page-header {
+    position: relative;
+    overflow: hidden;
+    padding: 28px 24px 32px;
+}
+
+@media (min-width: 1024px) {
+    .vf-page-header {
+        padding: 32px 40px 36px;
+    }
+}
+
+.vf-page-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.vf-header-text {
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: all 0.6s ease-out;
+}
+
+.vf-header-text.mounted {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vf-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    backdrop-filter: blur(8px);
+}
+
+.vf-header-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+}
+
+@media (min-width: 1024px) {
+    .vf-header-title {
+        font-size: 26px;
+    }
+}
+
+.vf-header-desc {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 420px;
+}
+
+/* Header decorative orbs */
+.vf-header-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.vf-header-orb {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.vf-header-orb-1 {
+    top: -50px;
+    right: -50px;
+    width: 180px;
+    height: 180px;
+    opacity: 0.12;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
+    animation: vfFloat 6s ease-in-out infinite;
+}
+
+.vf-header-orb-2 {
+    bottom: -30px;
+    left: 25%;
+    width: 140px;
+    height: 140px;
+    opacity: 0.08;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 70%);
+    animation: vfFloat 8s ease-in-out infinite reverse;
+}
+
+@keyframes vfFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+/* ---- Gradient Themes ---- */
+.vf-gradient-blue {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+}
+
+.vf-gradient-green {
+    background: linear-gradient(135deg, #14532d 0%, #16a34a 100%);
+}
+
+.vf-gradient-purple {
+    background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%);
+}
+
+.vf-gradient-amber {
+    background: linear-gradient(135deg, #78350f 0%, #d97706 100%);
+}
+
+.vf-gradient-teal {
+    background: linear-gradient(135deg, #134e4a 0%, #14b8a6 100%);
+}
+
+/* ---- Form Card ---- */
+.vf-form-section {
+    padding: 24px;
+    flex: 1;
+}
+
+@media (min-width: 1024px) {
+    .vf-form-section {
+        padding: 28px 40px;
+    }
+}
+
+.vf-form-card {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    max-width: 560px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: all 0.5s ease-out 0.15s;
+}
+
+.vf-form-card.mounted {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vf-form-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 24px 0;
+}
+
+.vf-form-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.vf-form-card-icon.blue {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.vf-form-card-icon.green {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+}
+
+.vf-form-card-icon.purple {
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+}
+
+.vf-form-card-icon.amber {
+    background: linear-gradient(135deg, #d97706, #f59e0b);
+}
+
+.vf-form-card-icon.teal {
+    background: linear-gradient(135deg, #0d9488, #14b8a6);
+}
+
+.vf-form-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.vf-form-card-subtitle {
+    font-size: 11px;
+    color: #9ca3af;
+    font-weight: 500;
+    margin: 2px 0 0 0;
+}
+
+.vf-form-body {
+    padding: 20px 24px 24px;
+}
+
+/* ---- Form Fields ---- */
+.vf-field {
+    margin-bottom: 18px;
+}
+
+.vf-field:last-child {
+    margin-bottom: 0;
+}
+
+.vf-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.vf-label .vf-required {
+    color: #ef4444;
+    margin-left: 2px;
+}
+
+.vf-input-wrapper {
+    position: relative;
+}
+
+.vf-input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #111827;
+    background: #fff;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.vf-input:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.vf-input::placeholder {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.vf-input-with-icon {
+    padding-right: 44px;
+}
+
+.vf-eye-btn {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #9ca3af;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.15s ease;
+}
+
+.vf-eye-btn:hover {
+    color: #6b7280;
+    background: #f3f4f6;
+}
+
+/* File upload */
+.vf-file-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px dashed #d1d5db;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #6b7280;
+    background: #f9fafb;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.vf-file-input:hover {
+    border-color: #16a34a;
+    background: #f0fdf4;
+}
+
+.vf-file-input:focus {
+    outline: none;
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+/* Error */
+.vf-error {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #ef4444;
+    font-weight: 500;
+}
+
+/* ---- Submit Button ---- */
+.vf-submit-row {
+    padding-top: 6px;
+}
+
+.vf-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 28px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.vf-submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+}
+
+.vf-submit-btn:active {
+    transform: translateY(0);
+}
+
+.vf-submit-btn.blue {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.vf-submit-btn.green {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+}
+
+.vf-submit-btn.purple {
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+}
+
+.vf-submit-btn.amber {
+    background: linear-gradient(135deg, #d97706, #f59e0b);
+}
+
+.vf-submit-btn.teal {
+    background: linear-gradient(135deg, #0d9488, #14b8a6);
+}
+
+.vf-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ---- Loading Overlay ---- */
+.vf-loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    gap: 16px;
+}
+
+.vf-spinner {
+    width: 44px;
+    height: 44px;
+    border: 4px solid #e5e7eb;
+    border-top-color: #16a34a;
+    border-radius: 50%;
+    animation: vfSpin 0.8s linear infinite;
+}
+
+.vf-loading-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+
+@keyframes vfSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Blur content behind loading */
+.vf-blurred {
+    filter: blur(3px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ---- OTP Inputs (for Aadhaar & VoterId) ---- */
+.vf-otp-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0 10px;
+}
+
+.vf-otp-input {
+    width: 48px;
+    height: 52px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: inherit;
+    color: #111827;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    outline: none;
+    background: #f9fafb;
+    transition: all 0.2s ease;
+}
+
+.vf-otp-input:focus {
+    border-color: #16a34a;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+}
+
+/* ---- Modal / Popup Overlay ---- */
+.vf-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    animation: vfModalIn 0.25s ease-out;
+}
+
+@keyframes vfModalIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.vf-modal-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    max-width: 480px;
+    width: 100%;
+    overflow: hidden;
+    animation: vfModalCardIn 0.3s ease-out;
+}
+
+@keyframes vfModalCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.vf-modal-header {
+    padding: 20px 24px 0;
+}
+
+.vf-modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px 0;
+}
+
+.vf-modal-subtitle {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.vf-modal-body {
+    padding: 16px 24px;
+}
+
+.vf-modal-footer {
+    padding: 12px 24px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.vf-modal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.vf-modal-btn-primary {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.2);
+}
+
+.vf-modal-btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+.vf-modal-btn-secondary {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.vf-modal-btn-secondary:hover {
+    background: #e5e7eb;
+}
+
+/* ---- Result Cards (for CIBIL) ---- */
+.vf-result-section {
+    padding: 24px;
+}
+
+@media (min-width: 1024px) {
+    .vf-result-section {
+        padding: 28px 40px;
+    }
+}
+
+.vf-result-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 800px;
+}
+
+@media (min-width: 640px) {
+    .vf-result-grid {
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+    }
+}
+
+.vf-result-card {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.vf-result-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.vf-result-card-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 6px 0;
+}
+
+.vf-result-card-value {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.vf-result-card-value.red {
+    color: #ef4444;
+}
+
+.vf-result-card-value.blue {
+    color: #2563eb;
+}
+
+.vf-result-left {
+    border-left: 4px solid #ef4444;
+}
+
+.vf-result-right {
+    border-left: 4px solid #2563eb;
+}
+
+/* Speedometer wrapper */
+.vf-speedometer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.vf-speedometer-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 16px 0;
+}
+
+/* Info tooltip */
+.vf-info-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: #f3f4f6;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.vf-info-btn:hover {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+/* CIBIL score range dots */
+.vf-score-range {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 13px;
+    color: #374151;
+}
+
+.vf-score-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.vf-score-dot.red {
+    background: #ef4444;
+}
+
+.vf-score-dot.orange {
+    background: #ff6347;
+}
+
+.vf-score-dot.yellow {
+    background: #eab308;
+}
+
+.vf-score-dot.lime {
+    background: #84cc16;
+}
+
+.vf-score-dot.green {
+    background: #22c55e;
+}
+
+/* ---- GST Data rows ---- */
+.vf-data-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #f3f4f6;
+    gap: 12px;
+}
+
+.vf-data-row:last-child {
+    border-bottom: none;
+}
+
+.vf-data-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.vf-data-value {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111827;
+    text-align: right;
+    word-break: break-word;
+}
+
+/* ---- Security Footer ---- */
+.vf-security-footer {
+    padding: 0 24px 24px;
+}
+
+@media (min-width: 1024px) {
+    .vf-security-footer {
+        padding: 0 40px 28px;
+    }
+}
+
+.vf-security-footer-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.vf-security-icon {
+    color: #16a34a;
+    flex-shrink: 0;
+}
+
+.vf-security-text {
+    font-size: 11px;
+    color: #9ca3af;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ---- OTP Dialog Enhancements ---- */
+.vf-otp-dialog {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.vf-otp-dialog .p-dialog-header {
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1.25rem 1.5rem;
+}
+
+.vf-otp-dialog-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.vf-otp-dialog-content {
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.vf-otp-desc {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.vf-otp-dialog .p-dialog-footer {
+    border-top: 1px solid #e2e8f0;
+    padding: 1.25rem 1.5rem;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+.otp-submit {
+    width: 100%;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 600;
+}

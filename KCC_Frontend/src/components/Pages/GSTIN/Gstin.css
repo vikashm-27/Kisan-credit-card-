@@ -1,0 +1,17 @@
+/* Gstin page-specific overrides */
+/* All main styles come from shared/VerificationForm.css */
+
+.gstin-modal-wide {
+  max-width: 560px;
+}
+
+.gstin-modal-success-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gstin-success-icon {
+  color: #16a34a;
+  flex-shrink: 0;
+}

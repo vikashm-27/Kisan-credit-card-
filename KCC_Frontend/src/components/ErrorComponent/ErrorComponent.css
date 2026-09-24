@@ -1,0 +1,26 @@
+.error-page {
+    background-image: url('/public/Images/erorre.png');
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .error-content {
+    color: black;
+    text-align: center;
+  }
+  
+  .error-heading1 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+  
+  .error-heading2 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+  

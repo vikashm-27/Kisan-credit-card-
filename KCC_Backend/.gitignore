@@ -1,0 +1,12 @@
+node_modules/
+.env
+*.env
+!.env.example
+Key/
+apikey.json
+admin.json
+logs/
+*.log
+upload/
+images/page_*.png
+dist/

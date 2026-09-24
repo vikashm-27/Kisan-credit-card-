@@ -1,0 +1,270 @@
+/* ====================================
+   HEADER — Premium Compact Design
+   ==================================== */
+
+.header-root {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    height: 56px;
+    background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15),
+        0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 16px;
+}
+
+@media (min-width: 1024px) {
+    .header-inner {
+        padding: 0 24px;
+    }
+}
+
+/* ---- Left side ---- */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-menu-btn {
+    display: none;
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.header-menu-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 1023px) {
+    .header-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Logo group */
+.header-logo-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.header-logo-group:hover {
+    opacity: 0.9;
+}
+
+.header-logo-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-leaf-icon {
+    width: 18px;
+    height: 18px;
+    color: #86efac;
+}
+
+.header-logo-text {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .header-logo-text {
+        display: block;
+    }
+}
+
+.header-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.header-subtitle {
+    font-size: 10px;
+    color: rgba(134, 239, 172, 0.7);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0;
+    margin-top: 1px;
+}
+
+/* ---- Right side ---- */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* User button */
+.header-dropdown-wrapper {
+    position: relative;
+}
+
+.header-user-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.header-user-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.header-user-btn.active {
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.header-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(34, 197, 94, 0.3);
+}
+
+.header-avatar-icon {
+    color: #fff;
+}
+
+.header-username {
+    display: none;
+    font-size: 13px;
+    font-weight: 600;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+    .header-username {
+        display: inline;
+    }
+}
+
+.header-chevron {
+    transition: transform 0.25s ease;
+    opacity: 0.7;
+}
+
+.header-chevron.rotated {
+    transform: rotate(180deg);
+}
+
+/* ---- Dropdown menu ---- */
+.header-dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    width: 220px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12),
+        0 4px 12px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    animation: headerDropdownIn 0.2s ease-out;
+}
+
+@keyframes headerDropdownIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.header-dropdown-info {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.header-dropdown-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.header-dropdown-email {
+    font-size: 11px;
+    color: #9ca3af;
+    margin: 3px 0 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.header-dropdown-actions {
+    padding: 6px;
+}
+
+.header-logout-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 500;
+    color: #dc2626;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s ease;
+}
+
+.header-logout-btn:hover {
+    background: #fef2f2;
+}

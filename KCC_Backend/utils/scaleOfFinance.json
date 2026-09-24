@@ -1,0 +1,112 @@
+[
+  {
+    "id": "paddy",
+    "name": "Paddy (Rice)",
+    "season": "Kharif",
+    "category": "Cereals",
+    "scaleOfFinance": 35000,
+    "unit": "per acre",
+    "durationMonths": 5,
+    "description": "Staple grain requiring high irrigation and nutrient management."
+  },
+  {
+    "id": "wheat",
+    "name": "Wheat",
+    "season": "Rabi",
+    "category": "Cereals",
+    "scaleOfFinance": 30000,
+    "unit": "per acre",
+    "durationMonths": 4,
+    "description": "Major winter cereal crop with moderate irrigation requirement."
+  },
+  {
+    "id": "cotton",
+    "name": "Cotton",
+    "season": "Kharif",
+    "category": "Cash Crop",
+    "scaleOfFinance": 42000,
+    "unit": "per acre",
+    "durationMonths": 6,
+    "description": "Commercial cash crop requiring pest control and intensive care."
+  },
+  {
+    "id": "sugarcane",
+    "name": "Sugarcane",
+    "season": "Annual",
+    "category": "Cash Crop",
+    "scaleOfFinance": 68000,
+    "unit": "per acre",
+    "durationMonths": 12,
+    "description": "Long-duration perennial crop with high working capital needs."
+  },
+  {
+    "id": "groundnut",
+    "name": "Groundnut (Peanut)",
+    "season": "Kharif",
+    "category": "Oilseeds",
+    "scaleOfFinance": 28000,
+    "unit": "per acre",
+    "durationMonths": 4,
+    "description": "High-value oilseed crop with moderate water demand."
+  },
+  {
+    "id": "maize",
+    "name": "Maize (Corn)",
+    "season": "Kharif",
+    "category": "Cereals",
+    "scaleOfFinance": 26000,
+    "unit": "per acre",
+    "durationMonths": 4,
+    "description": "Fast-growing cereal utilized for food and animal feed."
+  },
+  {
+    "id": "soybean",
+    "name": "Soybean",
+    "season": "Kharif",
+    "category": "Oilseeds",
+    "scaleOfFinance": 27000,
+    "unit": "per acre",
+    "durationMonths": 4,
+    "description": "Leguminous oilseed with nitrogen-fixing soil benefits."
+  },
+  {
+    "id": "pulses",
+    "name": "Pulses (Gram / Tur / Moong)",
+    "season": "Rabi",
+    "category": "Pulses",
+    "scaleOfFinance": 24000,
+    "unit": "per acre",
+    "durationMonths": 4,
+    "description": "Low-irrigation protein crops improving soil fertility."
+  },
+  {
+    "id": "vegetables",
+    "name": "Commercial Vegetables (Tomato / Onion / Potato)",
+    "season": "Multi-season",
+    "category": "Horticulture",
+    "scaleOfFinance": 48000,
+    "unit": "per acre",
+    "durationMonths": 4,
+    "description": "High-turnover perishable crops with intensive input needs."
+  },
+  {
+    "id": "mustard",
+    "name": "Mustard",
+    "season": "Rabi",
+    "category": "Oilseeds",
+    "scaleOfFinance": 25000,
+    "unit": "per acre",
+    "durationMonths": 4,
+    "description": "Winter oilseed crop popular across northern and central plains."
+  },
+  {
+    "id": "banana",
+    "name": "Banana",
+    "season": "Annual",
+    "category": "Horticulture",
+    "scaleOfFinance": 75000,
+    "unit": "per acre",
+    "durationMonths": 12,
+    "description": "High-value commercial fruit plantation with heavy fertilizer/irrigation input."
+  }
+]

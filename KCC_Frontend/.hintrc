@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "user-select",
+          "scrollbar-width",
+          "scrollbar-width: none",
+          "appearance",
+          "appearance: auto"
+        ]
+      }
+    ]
+  }
+}

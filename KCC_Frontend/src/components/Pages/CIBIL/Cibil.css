@@ -1,0 +1,13 @@
+/* Cibil page-specific overrides */
+
+.cibil-icon-red {
+  color: #ef4444;
+}
+
+.cibil-icon-blue {
+  color: #2563eb;
+}
+
+.vf-result-card-icon-row {
+  margin-bottom: 8px;
+}

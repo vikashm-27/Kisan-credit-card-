@@ -1,0 +1,442 @@
+[
+  {
+    "id": "TS/HYD/2024/LR-001",
+    "surveyNumber": "Survey No. 145/A",
+    "village": "Shamshabad",
+    "mandal": "Rajendranagar",
+    "district": "Rangareddy",
+    "state": "Telangana",
+    "ownerName": "Ramesh Kumar Reddy",
+    "fatherName": "Venkat Reddy",
+    "aadharLast4": "8923",
+    "landType": "Agricultural - Wet Land",
+    "totalArea": {
+      "acres": 2.5,
+      "hectares": 1.012,
+      "sqMeters": 10120
+    },
+    "registrationDate": "2019-06-15",
+    "documentNumber": "DOC-2019-HYD-14523",
+    "polygon": [
+      [
+        [
+          78.4267,
+          17.2403
+        ],
+        [
+          78.4312,
+          17.2403
+        ],
+        [
+          78.4312,
+          17.2445
+        ],
+        [
+          78.4267,
+          17.2445
+        ],
+        [
+          78.4267,
+          17.2403
+        ]
+      ]
+    ],
+    "cropHistory": [
+      "Rice (Kharif 2024)",
+      "Groundnut (Rabi 2023)",
+      "Cotton (Kharif 2023)"
+    ],
+    "irrigationSource": "Bore Well + Canal",
+    "soilType": "Black Cotton Soil",
+    "khasraNumber": "KH-145/A/2019",
+    "encumbrance": "None",
+    "mutation": "Completed",
+    "status": "Active"
+  },
+  {
+    "id": "TS/WGL/2024/LR-002",
+    "surveyNumber": "Survey No. 89/B",
+    "village": "Hasanparthy",
+    "mandal": "Hanamkonda",
+    "district": "Warangal",
+    "state": "Telangana",
+    "ownerName": "Lakshmi Devi",
+    "fatherName": "Narasimha Rao",
+    "aadharLast4": "4571",
+    "landType": "Agricultural - Dry Land",
+    "totalArea": {
+      "acres": 5.0,
+      "hectares": 2.023,
+      "sqMeters": 20230
+    },
+    "registrationDate": "2021-03-22",
+    "documentNumber": "DOC-2021-WGL-08912",
+    "polygon": [
+      [
+        [
+          79.5625,
+          17.9784
+        ],
+        [
+          79.5695,
+          17.9784
+        ],
+        [
+          79.5695,
+          17.9835
+        ],
+        [
+          79.5625,
+          17.9835
+        ],
+        [
+          79.5625,
+          17.9784
+        ]
+      ]
+    ],
+    "cropHistory": [
+      "Maize (Kharif 2024)",
+      "Red Gram (Rabi 2023)",
+      "Turmeric (Kharif 2023)"
+    ],
+    "irrigationSource": "Rain-fed + Bore Well",
+    "soilType": "Red Soil",
+    "khasraNumber": "KH-89/B/2021",
+    "encumbrance": "None",
+    "mutation": "Completed",
+    "status": "Active"
+  },
+  {
+    "id": "TS/KNR/2024/LR-003",
+    "surveyNumber": "Survey No. 256/C",
+    "village": "Jammikunta",
+    "mandal": "Karimnagar",
+    "district": "Karimnagar",
+    "state": "Telangana",
+    "ownerName": "Suresh Goud",
+    "fatherName": "Yadagiri Goud",
+    "aadharLast4": "3267",
+    "landType": "Agricultural - Garden Land",
+    "totalArea": {
+      "acres": 3.2,
+      "hectares": 1.295,
+      "sqMeters": 12950
+    },
+    "registrationDate": "2020-11-08",
+    "documentNumber": "DOC-2020-KNR-22341",
+    "polygon": [
+      [
+        [
+          79.1350,
+          18.4350
+        ],
+        [
+          79.1420,
+          18.4350
+        ],
+        [
+          79.1420,
+          18.4410
+        ],
+        [
+          79.1350,
+          18.4410
+        ],
+        [
+          79.1350,
+          18.4350
+        ]
+      ]
+    ],
+    "cropHistory": [
+      "Mango (Perennial)",
+      "Guava (Perennial)",
+      "Vegetable crops (Rabi 2023)"
+    ],
+    "irrigationSource": "Canal + Drip Irrigation",
+    "soilType": "Alluvial Soil",
+    "khasraNumber": "KH-256/C/2020",
+    "encumbrance": "None",
+    "mutation": "Completed",
+    "status": "Active"
+  },
+  {
+    "id": "KA/BLR/2024/LR-004",
+    "surveyNumber": "Survey No. 78/D",
+    "village": "Devanahalli",
+    "mandal": "Bengaluru North",
+    "district": "Bengaluru Rural",
+    "state": "Karnataka",
+    "ownerName": "Venkatesh Murthy",
+    "fatherName": "Krishna Murthy",
+    "aadharLast4": "6789",
+    "landType": "Agricultural - Wet Land",
+    "totalArea": {
+      "acres": 4.0,
+      "hectares": 1.619,
+      "sqMeters": 16190
+    },
+    "registrationDate": "2018-07-20",
+    "documentNumber": "DOC-2018-BLR-56742",
+    "polygon": [
+      [
+        [
+          77.7100,
+          13.2480
+        ],
+        [
+          77.7175,
+          13.2480
+        ],
+        [
+          77.7175,
+          13.2540
+        ],
+        [
+          77.7100,
+          13.2540
+        ],
+        [
+          77.7100,
+          13.2480
+        ]
+      ]
+    ],
+    "cropHistory": [
+      "Ragi (Kharif 2024)",
+      "Sugarcane (Annual)",
+      "Mulberry (Perennial)"
+    ],
+    "irrigationSource": "Bore Well + Tank",
+    "soilType": "Red Laterite Soil",
+    "khasraNumber": "KH-78/D/2018",
+    "encumbrance": "None",
+    "mutation": "Completed",
+    "status": "Active"
+  },
+  {
+    "id": "AP/VJA/2024/LR-005",
+    "surveyNumber": "Survey No. 312/E",
+    "village": "Gannavaram",
+    "mandal": "Krishna",
+    "district": "Krishna",
+    "state": "Andhra Pradesh",
+    "ownerName": "Srinivasa Rao",
+    "fatherName": "Apparao",
+    "aadharLast4": "1234",
+    "landType": "Agricultural - Wet Land",
+    "totalArea": {
+      "acres": 6.0,
+      "hectares": 2.428,
+      "sqMeters": 24280
+    },
+    "registrationDate": "2017-04-10",
+    "documentNumber": "DOC-2017-VJA-33219",
+    "polygon": [
+      [
+        [
+          80.8050,
+          16.5300
+        ],
+        [
+          80.8140,
+          16.5300
+        ],
+        [
+          80.8140,
+          16.5370
+        ],
+        [
+          80.8050,
+          16.5370
+        ],
+        [
+          80.8050,
+          16.5300
+        ]
+      ]
+    ],
+    "cropHistory": [
+      "Rice (Kharif 2024)",
+      "Black Gram (Rabi 2023)",
+      "Tobacco (Kharif 2023)"
+    ],
+    "irrigationSource": "Krishna River Canal",
+    "soilType": "Alluvial Soil",
+    "khasraNumber": "KH-312/E/2017",
+    "encumbrance": "None",
+    "mutation": "Completed",
+    "status": "Active"
+  },
+  {
+    "id": "MH/NGP/2024/LR-006",
+    "surveyNumber": "Survey No. 45/F",
+    "village": "Kamptee",
+    "mandal": "Nagpur North",
+    "district": "Nagpur",
+    "state": "Maharashtra",
+    "ownerName": "Priya Deshmukh",
+    "fatherName": "Ganesh Deshmukh",
+    "aadharLast4": "5678",
+    "landType": "Agricultural - Dry Land",
+    "totalArea": {
+      "acres": 1.5,
+      "hectares": 0.607,
+      "sqMeters": 6070
+    },
+    "registrationDate": "2022-01-15",
+    "documentNumber": "DOC-2022-NGP-11234",
+    "polygon": [
+      [
+        [
+          79.1800,
+          21.2300
+        ],
+        [
+          79.1850,
+          21.2300
+        ],
+        [
+          79.1850,
+          21.2340
+        ],
+        [
+          79.1800,
+          21.2340
+        ],
+        [
+          79.1800,
+          21.2300
+        ]
+      ]
+    ],
+    "cropHistory": [
+      "Orange (Perennial)",
+      "Soybean (Kharif 2024)",
+      "Wheat (Rabi 2023)"
+    ],
+    "irrigationSource": "Bore Well",
+    "soilType": "Black Cotton Soil",
+    "khasraNumber": "KH-45/F/2022",
+    "encumbrance": "None",
+    "mutation": "Completed",
+    "status": "Active"
+  },
+  {
+    "id": "MH/NGP/2024/LR-007",
+    "surveyNumber": "Survey No. 123/F",
+    "village": "Kamptee",
+    "mandal": "Nagpur North",
+    "district": "Nagpur",
+    "state": "Maharashtra",
+    "ownerName": "Priya Deshmukh",
+    "fatherName": "Ganesh Deshmukh",
+    "aadharLast4": "5676",
+    "landType": "Agricultural - Dry Land",
+    "totalArea": {
+      "acres": 1.5,
+      "hectares": 0.607,
+      "sqMeters": 6070
+    },
+    "registrationDate": "2022-01-15",
+    "documentNumber": "DOC-2022-NGP-11234",
+    "polygon": [
+      [
+        [
+          76.1800,
+          21.2300
+        ],
+        [
+          76.1850,
+          21.2300
+        ],
+        [
+          76.1850,
+          21.2340
+        ],
+        [
+          76.1800,
+          21.2340
+        ],
+        [
+          76.1800,
+          21.2300
+        ]
+      ]
+    ],
+    "cropHistory": [
+      "Tobacco (Kharif 2023)",
+      "Soybean (Kharif 2024)",
+      "Sugarcane (Annual)"
+    ],
+    "irrigationSource": "Bore Well",
+    "soilType": "Black Cotton Soil",
+    "khasraNumber": "KH-45/F/2022",
+    "encumbrance": "None",
+    "mutation": "Completed",
+    "status": "Active"
+  },
+  {
+    "id": "KA/BLR/2024/LR-008",
+    "surveyNumber": "Survey No. 145/2A",
+    "village": "Hosahalli",
+    "mandal": "Devanahalli",
+    "district": "Bengaluru Rural",
+    "state": "Karnataka",
+    "ownerName": "Ravi Kumar Gowda",
+    "fatherName": "Kempe Gowda",
+    "aadharLast4": "9481",
+    "landType": "Agricultural - Wet Land",
+    "totalArea": {
+      "acres": 3.8,
+      "hectares": 1.538,
+      "sqMeters": 15378
+    },
+    "registrationDate": "2020-03-14",
+    "documentNumber": "DOC-2020-BLR-14529",
+    "polygon": [
+      [
+        [
+          77.7265,
+          13.1485
+        ],
+        [
+          77.7315,
+          13.1485
+        ],
+        [
+          77.7315,
+          13.1525
+        ],
+        [
+          77.7285,
+          13.1525
+        ],
+        [
+          77.7285,
+          13.1505
+        ],
+        [
+          77.7265,
+          13.1505
+        ],
+        [
+          77.7265,
+          13.1485
+        ]
+      ]
+    ],
+    "cropHistory": [
+      "Ragi (Kharif 2024)",
+      "Maize (Rabi 2023)",
+      "Tomato (Summer 2024)"
+    ],
+    "irrigationSource": "Bore Well + Drip Irrigation",
+    "soilType": "Red Loamy Soil",
+    "khasraNumber": "KH-145/2A/2020",
+    "encumbrance": "None",
+    "mutation": "Completed",
+    "status": "Active"
+  }
+]

@@ -1,0 +1,30 @@
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh; 
+    /* height: 100%; */
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+  }
+  
+  .confirm-button-container {
+    margin-top: auto; /* Push the button to the bottom */
+  }
+  
+  .confirm-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .confirm-button:hover {
+    background-color: #45a049;
+  }
+  

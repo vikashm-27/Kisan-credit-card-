@@ -1,0 +1,72 @@
+/* User Activity Reports Specific Styles */
+
+.usr-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: #fff;
+  border-bottom: 1px solid #f3f4f6;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.usr-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.usr-header-icon {
+  color: #7c3aed;
+}
+
+.usr-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* Cells */
+.usr-user-cell,
+.usr-time-cell,
+.usr-activity-cell,
+.usr-ip-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.usr-user-icon,
+.usr-time-icon,
+.usr-activity-icon,
+.usr-ip-icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.usr-user-cell {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.usr-user-cell span {
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.usr-ip-cell {
+  font-family: monospace;
+  font-size: 12px;
+  background: #f8fafc;
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  display: inline-flex;
+}
