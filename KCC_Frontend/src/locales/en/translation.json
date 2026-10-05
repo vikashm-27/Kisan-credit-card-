@@ -13,6 +13,8 @@
     "user_management": "User Management",
     "user_sessions": "User Sessions",
     "admin": "Admin",
+    "loan_applications": "Loan Applications",
+    "underwriting_queue": "Underwriting Queue",
     "kyc_reports": "KYC Reports",
     "gstin_reports": "GSTIN Reports",
     "user_activity": "User Activity"
@@ -519,5 +521,56 @@
     "sign_in": "Sign in",
     "terms": "By creating an account, you agree to our Terms of Service",
     "data_secure": "Your data is encrypted & secure"
+  },
+  "admin": {
+    "header": {
+      "title": "Bank Officer Underwriting & Loan Management",
+      "subtitle": "Kisan Credit Card (KCC) Lead Origination & Underwriting Portal",
+      "branch_office": "Mandya Branch Lead Office",
+      "refresh_queue": "Refresh Queue"
+    },
+    "kpi": {
+      "total_applications": "TOTAL APPLICATIONS",
+      "total_desc": "All branch submissions",
+      "pending_underwriting": "PENDING UNDERWRITING",
+      "action_needed": "Action Needed",
+      "pending_desc": "Awaiting credit decision",
+      "total_sanctioned": "TOTAL SANCTIONED LIMIT",
+      "sanctioned_badge": "Sanctioned",
+      "sanctioned_desc": "Disbursed KCC lines",
+      "approval_ratio": "APPROVAL RATIO",
+      "approval_badge": "Appr / Rej",
+      "approval_desc": "Underwriting efficiency"
+    },
+    "filters": {
+      "all": "All Applications",
+      "pending": "Pending Review",
+      "under_review": "Under Review",
+      "approved": "Approved",
+      "flagged": "Flagged",
+      "rejected": "Rejected",
+      "search_placeholder": "Search by farmer, phone, survey #, crop..."
+    },
+    "table": {
+      "headers": {
+        "applicant": "APPLICANT FARMER",
+        "survey": "SURVEY & LAND AREA",
+        "crop": "CROP & SEASON",
+        "cibil": "CIBIL SCORE",
+        "limit": "SANCTION LIMIT",
+        "status": "DECISION STATUS",
+        "action": "ACTION"
+      },
+      "acres": "Acres",
+      "scale": "Scale",
+      "per_acre": "Acre",
+      "review_btn": "Review"
+    },
+    "status": {
+      "submitted": "SUBMITTED",
+      "approved": "APPROVED",
+      "rejected": "REJECTED",
+      "flagged": "FLAGGED"
+    }
   }
 }

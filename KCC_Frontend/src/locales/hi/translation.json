@@ -13,6 +13,8 @@
     "user_management": "उपयोगकर्ता प्रबंधन",
     "user_sessions": "उपयोगकर्ता सत्र",
     "admin": "व्यवस्थापक",
+    "loan_applications": "ऋण आवेदन",
+    "underwriting_queue": "अंडरराइटिंग कतार",
     "kyc_reports": "KYC रिपोर्ट",
     "gstin_reports": "GSTIN रिपोर्ट",
     "user_activity": "उपयोगकर्ता गतिविधि"
@@ -519,5 +521,56 @@
     "sign_in": "साइन इन करें",
     "terms": "खाता बनाकर, आप हमारी सेवा की शर्तों से सहमत होते हैं",
     "data_secure": "आपका डेटा एन्क्रिप्टेड और सुरक्षित है"
+  },
+  "admin": {
+    "header": {
+      "title": "बैंक अधिकारी ऋण मूल्यांकन एवं प्रबंधन",
+      "subtitle": "किसान क्रेडिट कार्ड (KCC) आवेदन एवं ऋण मूल्यांकन पोर्टल",
+      "branch_office": "मांड्या शाखा प्रधान कार्यालय",
+      "refresh_queue": "सूची रिफ्रेश करें"
+    },
+    "kpi": {
+      "total_applications": "कुल आवेदन",
+      "total_desc": "सभी शाखाओं की प्रस्तुतियाँ",
+      "pending_underwriting": "मूल्यांकन लंबित",
+      "action_needed": "कार्रवाई आवश्यक",
+      "pending_desc": "ऋण निर्णय की प्रतीक्षा",
+      "total_sanctioned": "कुल स्वीकृत सीमा",
+      "sanctioned_badge": "स्वीकृत",
+      "sanctioned_desc": "वितरित KCC सीमाएं",
+      "approval_ratio": "स्वीकृति अनुपात",
+      "approval_badge": "स्वीकृत / अस्वीकृत",
+      "approval_desc": "मूल्यांकन दक्षता"
+    },
+    "filters": {
+      "all": "सभी आवेदन",
+      "pending": "समीक्षा लंबित",
+      "under_review": "समीक्षाधीन",
+      "approved": "स्वीकृत",
+      "flagged": "चिह्नित",
+      "rejected": "अस्वीकृत",
+      "search_placeholder": "किसान, फोन, सर्वेक्षण सं., फसल द्वारा खोजें..."
+    },
+    "table": {
+      "headers": {
+        "applicant": "आवेदक किसान",
+        "survey": "सर्वेक्षण और भूमि क्षेत्र",
+        "crop": "फसल और मौसम",
+        "cibil": "सिबिल स्कोर",
+        "limit": "स्वीकृत सीमा",
+        "status": "निर्णय स्थिति",
+        "action": "कार्रवाई"
+      },
+      "acres": "एकड़",
+      "scale": "पैमाना",
+      "per_acre": "प्रति एकड़",
+      "review_btn": "समीक्षा करें"
+    },
+    "status": {
+      "submitted": "प्रस्तुत",
+      "approved": "स्वीकृत",
+      "rejected": "अस्वीकृत",
+      "flagged": "चिह्नित"
+    }
   }
 }

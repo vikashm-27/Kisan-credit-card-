@@ -38,7 +38,46 @@ const Customer = sequelize.define('Customer', {
     branchName: { type: DataTypes.STRING },
     accountType: { type: DataTypes.STRING },
     accountNumber: { type: DataTypes.STRING },
-    ifscCode: { type: DataTypes.STRING }
+    ifscCode: { type: DataTypes.STRING },
+
+    // Application & Underwriting Lifecycle Fields
+    applicationStatus: {
+        type: DataTypes.ENUM('SUBMITTED', 'UNDER_REVIEW', 'APPROVED', 'REJECTED', 'FLAGGED'),
+        defaultValue: 'SUBMITTED',
+        allowNull: false
+    },
+    officerRemarks: {
+        type: DataTypes.TEXT,
+        allowNull: true
+    },
+    reviewedByOfficerId: {
+        type: DataTypes.INTEGER,
+        allowNull: true
+    },
+    reviewedAt: {
+        type: DataTypes.DATE,
+        allowNull: true
+    },
+    sanctionedAmount: {
+        type: DataTypes.DECIMAL(12, 2),
+        defaultValue: 0.00
+    },
+    cibilScore: {
+        type: DataTypes.INTEGER,
+        defaultValue: 700
+    },
+    cropType: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    surveyNumber: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    landAreaAcres: {
+        type: DataTypes.DECIMAL(8, 2),
+        defaultValue: 0.00
+    }
 }, {
     tableName: 'customers',
     timestamps: true

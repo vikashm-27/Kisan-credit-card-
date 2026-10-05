@@ -1032,7 +1032,7 @@ function KCCLandVerification() {
                       
                       const stateData = {
                           fromLandVerification: true,
-                          landArea: s.totalAreaAcres || landRecord?.totalArea?.acres || 2.5,
+                          landArea: s.totalAreaAcres ?? landRecord?.totalArea?.acres ?? 0,
                           cropHistory: s.cropHistory || landRecord?.cropHistory || ["Rice (Kharif 2024)", "Groundnut (Rabi 2023)"],
                           surveyNumber: s.surveyNumber || landRecord?.surveyNumber || "Survey No. 145/2A",
                           ownerName: s.ownerName || landRecord?.ownerName || "Farmer",
@@ -1070,7 +1070,7 @@ function KCCLandVerification() {
                         navigate("/customer/addcustomer", {
                           state: {
                             ...incomingKyc,
-                            landArea: s.totalAreaAcres || landRecord?.totalArea?.acres || 2.5,
+                            landArea: s.totalAreaAcres ?? landRecord?.totalArea?.acres ?? 0,
                             cropType: primaryCrop,
                             cropHistory: s.cropHistory || landRecord?.cropHistory || [],
                             farmScore: fScore,

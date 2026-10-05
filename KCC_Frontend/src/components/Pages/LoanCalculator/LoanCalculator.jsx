@@ -315,7 +315,7 @@ export default function LoanCalculator() {
   const [crops, setCrops] = useState(DEFAULT_CROPS);
   
   // Calculator Inputs prefilled from Land Verification if available
-  const [landArea, setLandArea] = useState(prefilledData?.landArea || 2.5);
+  const [landArea, setLandArea] = useState(prefilledData?.landArea ?? 0);
   
   // Verified Crop History (extracted from prefilled data or defaults)
   const verifiedCropHistory = isFromLandVerification 

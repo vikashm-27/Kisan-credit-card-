@@ -22,6 +22,7 @@ import {
   Settings,
   Monitor,
   Calculator,
+  Landmark,
 } from "lucide-react";
 
 
@@ -39,6 +40,12 @@ const MenuItems = [
     dropdownKey: "isAdminOpen",
     roles: ["admin"],
     submenus: [
+      {
+        path: "/customer/admin",
+        icon: Landmark,
+        subheading: "Loan Applications",
+        roles: ["admin"],
+      },
       {
         path: "/customer/admin/user-management",
         icon: UserCog,
@@ -175,9 +182,9 @@ const Menubar = () => {
           {item.submenus ? (
             <button
               onClick={handleToggle}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 group
+              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-full text-sm font-medium transition-all duration-200 group
                 ${isDropdownOpen
-                  ? "bg-green-50 text-green-700"
+                  ? "bg-green-100 text-green-800"
                   : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                 }`}
             >
@@ -200,20 +207,25 @@ const Menubar = () => {
           ) : (
             <NavLink
               to={item.path}
+              end
               onClick={() => sessionStorage.removeItem("kcc_verified_land")}
               className={({ isActive }) =>
-                `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 group
+                `flex items-center gap-3 px-3 py-2.5 rounded-full text-sm font-medium transition-all duration-200 group
                 ${isActive
-                  ? "bg-green-50 text-green-700"
+                  ? "bg-green-100 text-green-800"
                   : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                 }`
               }
             >
-              <IconComponent
-                size={18}
-                className="flex-shrink-0 text-gray-400 group-hover:text-gray-600 transition-colors duration-200"
-              />
-              {isOpen && <span>{item.heading === 'Verify Land' ? t('menu.land_verification') : t(`menu.${item.heading.toLowerCase().replace(' ', '_')}`)}</span>}
+              {({ isActive }) => (
+                <>
+                  <IconComponent
+                    size={18}
+                    className={`flex-shrink-0 transition-colors duration-200 ${isActive ? "text-green-600" : "text-gray-400 group-hover:text-gray-600"}`}
+                  />
+                  {isOpen && <span>{item.heading === 'Verify Land' ? t('menu.land_verification') : t(`menu.${item.heading.toLowerCase().replace(' ', '_')}`)}</span>}
+                </>
+              )}
             </NavLink>
           )}
 
@@ -231,20 +243,25 @@ const Menubar = () => {
                   <NavLink
                     key={subIndex}
                     to={submenu.path}
+                    end
                     onClick={() => sessionStorage.removeItem("kcc_verified_land")}
                     className={({ isActive }) =>
-                      `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-all duration-200 group
+                      `flex items-center gap-3 px-3 py-2 rounded-full text-sm transition-all duration-200 group
                       ${isActive
-                        ? "bg-green-100/60 text-green-700 font-semibold"
+                        ? "bg-green-100 text-green-800 font-semibold"
                         : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                       }`
                     }
                   >
-                    <SubIcon
-                      size={16}
-                      className="flex-shrink-0 text-gray-400 group-hover:text-gray-600 transition-colors duration-200"
-                    />
-                    {isOpen && <span>{t(`menu.${submenu.subheading.toLowerCase().replace(' ', '_')}`)}</span>}
+                    {({ isActive }) => (
+                      <>
+                        <SubIcon
+                          size={16}
+                          className={`flex-shrink-0 transition-colors duration-200 ${isActive ? "text-green-600" : "text-gray-400 group-hover:text-gray-600"}`}
+                        />
+                        {isOpen && <span>{t(`menu.${submenu.subheading.toLowerCase().replace(' ', '_')}`)}</span>}
+                      </>
+                    )}
                   </NavLink>
                 );
               })}

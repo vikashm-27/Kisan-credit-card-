@@ -59,6 +59,7 @@ const AddCustomer = () => {
     setValue,
     trigger,
     getValues,
+    watch,
     formState: { errors },
   } = useForm({
     shouldUnregister: true,
@@ -119,9 +120,10 @@ const AddCustomer = () => {
   };
 
   const handleIfscChange = async (e) => {
-    const code = e.target.value.toUpperCase();
+    const code = e.target.value.toUpperCase().slice(0, 11);
+    e.target.value = code;
     setValue('ifscCode', code, { shouldValidate: true });
-    if (code.length === 11) {
+    if (code.length === 11 && /^[A-Z]{4}0[A-Z0-9]{6}$/.test(code)) {
       try {
         const response = await axios.get(`https://ifsc.razorpay.com/${code}`);
         const data = response.data;
@@ -552,8 +554,25 @@ const AddCustomer = () => {
                 <div className="add-cust-form-grid grid-2">
                   <div className="vf-field">
                     <label className="vf-label">IFSC Code <span className="vf-required">*</span></label>
-                    <input className={`vf-input ${errors.ifscCode ? "error" : ""}`} placeholder="e.g., SBIN0000001" {...register("ifscCode", { required: "IFSC Code is required", onChange: handleIfscChange })} />
-                    {errors.ifscCode && <span className="vf-error">{errors.ifscCode.message}</span>}
+                    <input className={`vf-input ${errors.ifscCode ? "error" : ""}`} placeholder="e.g., SBIN0000001" maxLength={11} {...register("ifscCode", { 
+                      required: "IFSC Code is required",
+                      pattern: {
+                        value: /^[A-Z]{4}0[A-Z0-9]{6}$/,
+                        message: "Invalid IFSC format (e.g. SBIN0000454)"
+                      },
+                      validate: {
+                        length: (value) => !value || value.length === 11 || "IFSC Code must be exactly 11 characters",
+                        zero: (value) => !value || value.length < 5 || value[4] === '0' || "5th character must be zero ('0')"
+                      },
+                      onChange: handleIfscChange
+                    })} />
+                    {errors.ifscCode ? (
+                      <span className="vf-error">{errors.ifscCode.message}</span>
+                    ) : (
+                      watch("ifscCode")?.length === 11 && (
+                        <span style={{ color: "#059669", fontSize: "12px", marginTop: "4px", display: "block", fontWeight: "500" }}>✓ Valid IFSC Format</span>
+                      )
+                    )}
                   </div>
                   <div className="vf-field">
                     <label className="vf-label">Bank Name <span className="vf-required">*</span></label>
@@ -598,7 +617,18 @@ const AddCustomer = () => {
                   </div>
                   <div className="vf-field">
                     <label className="vf-label">Account Number <span className="vf-required">*</span></label>
-                    <input className={`vf-input ${errors.accountNumber ? "error" : ""}`} type="text" placeholder="Account Number" {...register("accountNumber", { required: "Account Number is required" })} />
+                    <input className={`vf-input ${errors.accountNumber ? "error" : ""}`} type="text" maxLength={18} placeholder="Account Number" {...register("accountNumber", { 
+                      required: "Account Number is required",
+                      pattern: {
+                        value: /^\d{9,18}$/,
+                        message: "Account number must be between 9 and 18 digits"
+                      },
+                      onChange: (e) => {
+                        const cleanNumber = e.target.value.replace(/\D/g, '').slice(0, 18);
+                        e.target.value = cleanNumber;
+                        setValue('accountNumber', cleanNumber, { shouldValidate: true });
+                      }
+                    })} />
                     {errors.accountNumber && <span className="vf-error">{errors.accountNumber.message}</span>}
                   </div>
                 </div>

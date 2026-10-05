@@ -99,7 +99,7 @@ const FormGeneration = () => {
               onClick={() => {
                 navigate("/customer/loan-calculator", {
                   state: {
-                    landArea: formData.landArea || 2.5,
+                    landArea: formData.landArea ?? 0,
                     cropType: formData.cropType || "Paddy",
                     cropHistory: formData.cropHistory || [],
                     farmScore: formData.farmScore || 75
