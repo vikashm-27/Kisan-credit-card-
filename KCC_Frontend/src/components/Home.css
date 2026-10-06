@@ -16,7 +16,7 @@
 .home-hero-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #14532d 0%, #166534 40%, #15803d 70%, #14532d 100%);
+    background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%);
 }
 
 .home-hero-decorations {
@@ -97,7 +97,7 @@
 }
 
 .home-hero-badge-text {
-    color: rgba(134, 239, 172, 0.75);
+    color: #ffffff;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
@@ -107,7 +107,7 @@
 .home-hero-title {
     font-size: 26px;
     font-weight: 800;
-    color: #fff;
+    color: #ffffff;
     margin: 0 0 10px 0;
     line-height: 1.25;
 }
@@ -119,14 +119,11 @@
 }
 
 .home-hero-title-highlight {
-    background: linear-gradient(135deg, #86efac, #fbbf24, #86efac);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
 }
 
 .home-hero-desc {
-    color: rgba(187, 247, 208, 0.55);
+    color: #ffffff;
     font-size: 14px;
     max-width: 520px;
     line-height: 1.6;
@@ -139,10 +136,9 @@
     gap: 8px;
     padding: 10px 20px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background: #ffffff;
+    color: #111827;
+    border: none;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
@@ -194,7 +190,10 @@
 /* Individual KPI Card */
 .kpi-card {
     position: relative;
-    border-radius: 14px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     overflow: hidden;
     opacity: 0;
     transform: translateY(16px);
@@ -208,7 +207,7 @@
 
 .kpi-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
 @keyframes kpiAppear {
@@ -216,40 +215,16 @@
         opacity: 0;
         transform: translateY(16px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Gradient backgrounds */
-.kpi-gradient-green {
-    background: linear-gradient(135deg, #166534, #15803d);
-}
-
-.kpi-gradient-blue {
-    background: linear-gradient(135deg, #1e3a5f, #2563eb);
-}
-
-.kpi-gradient-amber {
-    background: linear-gradient(135deg, #92400e, #d97706);
-}
-
-.kpi-gradient-emerald {
-    background: linear-gradient(135deg, #065f46, #10b981);
-}
-
 .kpi-card-inner {
-    padding: 16px;
+    padding: 24px;
     position: relative;
     z-index: 2;
-}
-
-@media (min-width: 768px) {
-    .kpi-card-inner {
-        padding: 18px;
-    }
 }
 
 .kpi-header {
@@ -267,39 +242,26 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    color: #fff;
-}
-
-.kpi-icon-green {
-    background: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .kpi-icon-blue {
-    background: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: #e0e7ff;
+    color: #4338ca;
 }
 
-.kpi-icon-amber {
-    background: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.kpi-icon-green {
+    background: #dcfce7;
+    color: #15803d;
 }
 
-.kpi-icon-emerald {
-    background: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.kpi-icon-red {
+    background: #fee2e2;
+    color: #b91c1c;
 }
 
-.kpi-trend {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    font-size: 11px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.12);
-    padding: 3px 8px;
-    border-radius: 20px;
+.kpi-icon-purple {
+    background: #f3e8ff;
+    color: #7e22ce;
 }
 
 .kpi-body {
@@ -310,7 +272,7 @@
 .kpi-value {
     font-size: 22px;
     font-weight: 800;
-    color: #fff;
+    color: #111827;
     margin: 0;
     line-height: 1.1;
     letter-spacing: -0.5px;
@@ -325,7 +287,7 @@
 .kpi-label {
     font-size: 11px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.65);
+    color: #475569;
     margin: 4px 0 0 0;
     letter-spacing: 0.3px;
 }
@@ -334,21 +296,6 @@
     .kpi-label {
         font-size: 12px;
     }
-}
-
-/* Shine overlay */
-.kpi-shine {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 80px;
-    height: 100%;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(255, 255, 255, 0.06),
-            transparent);
-    z-index: 1;
-    pointer-events: none;
 }
 
 /* ========= CONTENT CARDS ========= */

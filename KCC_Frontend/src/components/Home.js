@@ -64,37 +64,25 @@ const Home = () => {
       label: t("home_portal.active_customers"),
       value: dashboardStats.activeCustomers,
       icon: Users,
-      trend: t("home_portal.live_badge"),
-      trendLabel: "from database",
-      gradient: "kpi-gradient-green",
-      iconBg: "kpi-icon-green",
+      iconBg: "kpi-icon-blue",
     },
     {
       label: t("home_portal.kyc_verified"),
       value: dashboardStats.kycVerified,
       icon: FileCheck2,
-      trend: t("home_portal.live_badge"),
-      trendLabel: "from database",
-      gradient: "kpi-gradient-blue",
-      iconBg: "kpi-icon-blue",
+      iconBg: "kpi-icon-green",
     },
     {
       label: t("home_portal.kyc_rejected"),
       value: dashboardStats.kycRejected,
       icon: CreditCard,
-      trend: t("home_portal.live_badge"),
-      trendLabel: "from database",
-      gradient: "kpi-gradient-amber",
-      iconBg: "kpi-icon-amber",
+      iconBg: "kpi-icon-red",
     },
     {
       label: t("home_portal.success_rate"),
       value: dashboardStats.successRate,
       icon: BarChart3,
-      trend: t("home_portal.live_badge"),
-      trendLabel: "from database",
-      gradient: "kpi-gradient-emerald",
-      iconBg: "kpi-icon-emerald",
+      iconBg: "kpi-icon-purple",
     },
   ];
 
@@ -158,7 +146,7 @@ const Home = () => {
                   return (
                     <div
                       key={index}
-                      className={`kpi-card ${stat.gradient} ${mounted ? "mounted" : ""
+                      className={`kpi-card ${mounted ? "mounted" : ""
                         }`}
                       style={{
                         animationDelay: `${200 + index * 100}ms`,
@@ -169,17 +157,12 @@ const Home = () => {
                           <div className={`kpi-icon-wrapper ${stat.iconBg}`}>
                             <IconComp size={20} />
                           </div>
-                          <div className="kpi-trend">
-                            <TrendingUp size={12} />
-                            <span>{stat.trend}</span>
-                          </div>
                         </div>
                         <div className="kpi-body">
                           <p className="kpi-value">{stat.value}</p>
                           <p className="kpi-label">{stat.label}</p>
                         </div>
                       </div>
-                      <div className="kpi-shine" />
                     </div>
                   );
                 })}
