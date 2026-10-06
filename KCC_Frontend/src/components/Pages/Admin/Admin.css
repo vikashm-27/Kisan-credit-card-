@@ -200,18 +200,17 @@
 }
 
 .admin-kpi-card {
-  background: var(--admin-card-bg);
-  border-radius: 16px;
+  background: #ffffff;
+  border-radius: 12px;
   padding: 24px;
   border: none;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(10px);
 }
 
 .admin-kpi-card:hover {
@@ -229,7 +228,7 @@
 .admin-kpi-card-label {
   font-size: 14px;
   font-weight: 600;
-  color: var(--admin-text-muted);
+  color: #475569;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
@@ -259,15 +258,16 @@
   font-size: 18px;
 }
 
-.admin-kpi-icon-indigo { background: var(--status-review-bg); color: var(--color-indigo-main); }
-.admin-kpi-icon-amber  { background: var(--status-pending-bg); color: var(--color-amber-main); }
-.admin-kpi-icon-emerald{ background: var(--color-emerald-light); color: var(--color-primary-emerald); }
+.admin-kpi-icon-indigo { background: #e0e7ff; color: #4338ca; }
+.admin-kpi-icon-amber  { background: #fef08a; color: #b45309; }
+.admin-kpi-icon-emerald{ background: #dcfce7; color: #15803d; }
+.admin-kpi-icon-red    { background: #fee2e2; color: #b91c1c; }
 .admin-kpi-icon-blue   { background: var(--color-blue-bg); color: var(--color-blue-main); }
 
 .admin-kpi-card-value {
   font-size: 28px;
   font-weight: 800;
-  color: var(--admin-text-main);
+  color: #111827;
   letter-spacing: -0.02em;
   line-height: 1.1;
   margin-bottom: 8px;
@@ -291,6 +291,7 @@
 .admin-kpi-pill-emerald { background: var(--color-emerald-bg-alt2); color: var(--color-emerald-text); }
 .admin-kpi-pill-amber   { background: var(--color-amber-bg-alt); color: var(--color-amber-text-alt); }
 .admin-kpi-pill-blue    { background: var(--color-blue-bg-alt); color: var(--color-blue-text-alt); }
+.admin-kpi-pill-red     { background: #fee2e2; color: #b91c1c; }
 
 /* Main Table Container */
 .admin-table-card {

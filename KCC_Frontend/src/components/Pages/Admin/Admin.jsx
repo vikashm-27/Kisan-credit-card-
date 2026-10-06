@@ -440,25 +440,23 @@ const Admin = () => {
           </div>
         </div>
 
-        {/* KPI 4: Approval Ratio */}
+        {/* KPI 4: Rejected */}
         <div className="admin-kpi-card">
           <div className="admin-kpi-card-top">
             <div className="flex-center">
-              <span className="admin-kpi-card-label">{t('admin.kpi.approval_ratio')}</span>
+              <span className="admin-kpi-card-label">{t('admin.kpi.rejected') || "Rejected"}</span>
               <span className="admin-kpi-live-badge"><TrendingUp size={12} /> Live</span>
             </div>
-            <div className="admin-kpi-icon-wrap admin-kpi-icon-blue">
-              <CheckCircle2 size={20} />
+            <div className="admin-kpi-icon-wrap admin-kpi-icon-red">
+              <XCircle size={20} />
             </div>
           </div>
-          <div className="admin-kpi-card-value">
-            {typeof kpis.approvalRatio === "number" ? `${kpis.approvalRatio.toFixed(1)}%` : (kpis.approvalRatio || "0.0%")}
-          </div>
+          <div className="admin-kpi-card-value">{kpis.rejectedCount || 0}</div>
           <div className="admin-kpi-card-subtext">
-            <span className="admin-kpi-accent-pill admin-kpi-pill-blue">
-              {kpis.approvedCount} {t('admin.kpi.approval_badge').split(' / ')[0]} / {kpis.rejectedCount} {t('admin.kpi.approval_badge').split(' / ')[1]}
+            <span className="admin-kpi-accent-pill admin-kpi-pill-red">
+              {kpis.rejectedCount} {t('admin.kpi.rejected_badge') || "Declined"}
             </span>
-            <span>{t('admin.kpi.approval_desc')}</span>
+            <span>{t('admin.kpi.rejected_desc') || "Applications rejected"}</span>
           </div>
         </div>
       </div>
