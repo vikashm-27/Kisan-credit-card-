@@ -129,10 +129,10 @@ const Home = () => {
                   </p>
                   <button
                     onClick={() => navigate("/customer/kyc")}
-                    className="home-hero-cta"
+                    className="start-kyc-btn"
                   >
                     {t("home_portal.start_btn")}
-                    <ArrowRight size={16} className="home-hero-cta-icon" />
+                    <ArrowRight size={16} className="start-kyc-btn-icon" />
                   </button>
                 </div>
               </div>

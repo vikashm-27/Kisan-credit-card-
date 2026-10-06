@@ -130,7 +130,7 @@
     margin: 0 0 20px 0;
 }
 
-.home-hero-cta {
+.start-kyc-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -140,23 +140,22 @@
     color: #111827;
     border: none;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: inherit;
 }
 
-.home-hero-cta:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.35);
+.start-kyc-btn:hover {
+    background: #f3f4f6;
     transform: translateY(-1px);
 }
 
-.home-hero-cta-icon {
+.start-kyc-btn-icon {
     transition: transform 0.3s ease;
 }
 
-.home-hero-cta:hover .home-hero-cta-icon {
+.start-kyc-btn:hover .start-kyc-btn-icon {
     transform: translateX(3px);
 }
 
