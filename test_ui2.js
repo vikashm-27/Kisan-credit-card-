@@ -5,7 +5,7 @@ const { chromium } = require('playwright');
   const page = await browser.newPage();
   
   try {
-    await page.goto('http://localhost:3001');
+    await page.goto('http://localhost:3000');
     await page.waitForTimeout(2000);
     
     // Check if we need to login or if we are already in Admin page.

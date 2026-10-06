@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import generatePDF, { Margin } from "react-to-pdf";
-import ReactToPrint from "react-to-print";
+import { useReactToPrint } from "react-to-print";
 import {
   FileCheck,
   Printer,
@@ -29,6 +29,10 @@ const FormGeneration = () => {
   }, []);
 
   const componentRef = useRef();
+
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
 
   const handleBack = () => {
     navigate("/customer");
@@ -66,15 +70,10 @@ const FormGeneration = () => {
           </button>
 
           <div className="fg-toolbar-right">
-            <ReactToPrint
-              trigger={() => (
-                <button className="fg-action-btn print">
-                  <Printer size={16} />
-                  <span>{t('form_generation.print')}</span>
-                </button>
-              )}
-              content={() => componentRef.current}
-            />
+            <button className="fg-action-btn print" onClick={handlePrint}>
+              <Printer size={16} />
+              <span>{t('form_generation.print')}</span>
+            </button>
 
             <button
               className="fg-action-btn download"

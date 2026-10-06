@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import axios from "axios";
-import ReactToPrint from "react-to-print";
+import { useReactToPrint } from "react-to-print";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { SERVER_url } from "../../../config";
@@ -335,7 +335,17 @@ export default function LoanCalculator() {
   const [showSubventionModal, setShowSubventionModal] = useState(false);
   const [showSummaryModal, setShowSummaryModal] = useState(false);
   const [showOtherCrops, setShowOtherCrops] = useState(false);
-  const printSummaryRef = useRef();
+  const printSummaryRef = useRef(null);
+
+  // Selected crop details
+  const activeCrop = useMemo(() => {
+    return crops?.find(c => c.id === selectedCropId) || crops?.[0] || DEFAULT_CROPS[0];
+  }, [crops, selectedCropId]);
+
+  const handlePrint = useReactToPrint({
+    content: () => printSummaryRef.current,
+    documentTitle: `KCC_Loan_Summary_${String(activeCrop?.name || "Crop").replace(/\s+/g, '_')}`,
+  });
   
   // Additional Limit & Security Checkboxes
   const [showAdditionalLimit, setShowAdditionalLimit] = useState(false);
@@ -364,10 +374,6 @@ export default function LoanCalculator() {
       });
   }, []);
 
-  // Selected crop details
-  const activeCrop = useMemo(() => {
-    return crops.find(c => c.id === selectedCropId) || crops[0];
-  }, [crops, selectedCropId]);
 
   // Ensure exact UI match with verified crop history string if selected
   const displayCropName = useMemo(() => {
@@ -377,7 +383,7 @@ export default function LoanCalculator() {
 
   // Client-side fallback calculation for instant zero-latency UI
   const calculateLocally = useCallback((acres, crop, cibil, farm, userBaseRate, userSubvention, extraLimitAmount) => {
-    const rate = crop.scaleOfFinance || 30000;
+    const rate = crop?.scaleOfFinance || 30000;
     const baseCropLoan = Math.round(acres * rate);
     const postHarvestHousehold = Math.round(baseCropLoan * 0.10);
     const farmMaintenance = Math.round(baseCropLoan * 0.20);
@@ -968,10 +974,11 @@ export default function LoanCalculator() {
         <div className="sd-actions">
           {isFromLandVerification ? (
             <button 
+              type="button"
               className={`sd-btn green ${isSecurityError ? 'disabled' : ''}`}
               onClick={() => {
                 if (isSecurityError) return;
-                navigate("/customer/form-generation", { state: { ...prefilledData, ...result } });
+                navigate("/customer/formgeneration", { state: { ...prefilledData, ...result } });
               }}
               disabled={isSecurityError}
               style={isSecurityError ? { opacity: 0.5, cursor: "not-allowed" } : {}}
@@ -981,6 +988,7 @@ export default function LoanCalculator() {
             </button>
           ) : (
             <button 
+              type="button"
               className={`sd-btn green ${isSecurityError ? 'disabled' : ''}`} 
               onClick={() => {
                 if (isSecurityError) return;
@@ -993,16 +1001,10 @@ export default function LoanCalculator() {
               {t("loan_calc_extra.btn_verify_map")}
             </button>
           )}
-          <ReactToPrint
-            trigger={() => (
-              <button className="sd-btn dark" type="button">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-                {t("loan_calc_extra.btn_print_summary")}
-              </button>
-            )}
-            content={() => printSummaryRef.current}
-            documentTitle={`KCC_Loan_Summary_${(activeCrop?.name || "Crop").replace(/\s+/g, '_')}`}
-          />
+          <button className="sd-btn dark" type="button" onClick={handlePrint}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            {t("loan_calc_extra.btn_print_summary")}
+          </button>
         </div>
 
         <div style={{ textAlign: "center", marginTop: "14px" }}>
@@ -1211,16 +1213,10 @@ export default function LoanCalculator() {
               <button className="sd-modal-btn secondary" onClick={() => setShowSummaryModal(false)}>
                 {t("loan_calc_extra.btn_close")}
               </button>
-              <ReactToPrint
-                trigger={() => (
-                  <button className="sd-modal-btn primary" type="button">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-                    {t("loan_calc_extra.btn_print_sheet")}
-                  </button>
-                )}
-                content={() => printSummaryRef.current}
-                documentTitle={`KCC_Loan_Summary_${(activeCrop?.name || "Crop").replace(/\s+/g, '_')}`}
-              />
+              <button className="sd-modal-btn primary" type="button" onClick={handlePrint}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                {t("loan_calc_extra.btn_print_sheet")}
+              </button>
             </div>
           </div>
         </div>

@@ -27,7 +27,6 @@ import {
   Sparkles,
   Phone,
   Mail,
-  Building,
   Layers,
   Calendar,
   CheckSquare,
@@ -368,10 +367,6 @@ const Admin = () => {
             <h1 className="admin-heading">{t('admin.header.title')}</h1>
             <div className="admin-subheading">
               <span>{t('admin.header.subtitle')}</span>
-              <span className="admin-branch-badge">
-                <Building size={12} />
-                {t('admin.header.branch_office')}
-              </span>
             </div>
           </div>
         </div>
@@ -813,19 +808,6 @@ const Admin = () => {
               </div>
             </div>
 
-            {/* Feedback Alert */}
-            {feedback && (
-              <div
-                className={`feedback-alert ${feedback.type === "success" ? "feedback-success" : "feedback-error"}`}
-                onClick={() => setFeedback(null)}
-                style={{ cursor: "pointer" }}
-                title="Click to dismiss"
-              >
-                {feedback.type === "success" ? <CheckCircle2 size={18} /> : <AlertCircle size={18} />}
-                <span>{feedback.text}</span>
-              </div>
-            )}
-
             {/* Scrollable Content */}
             <div className="dossier-scroll-body">
               {/* Section 1: KYC Verification Badges */}
@@ -1072,6 +1054,19 @@ const Admin = () => {
 
             {/* Drawer Decision Footer Actions */}
             <div className="drawer-footer-actions">
+              {/* Feedback Alert */}
+              {feedback && (
+                <div
+                  className={`feedback-alert ${feedback.type === "success" ? "feedback-success" : "feedback-error"}`}
+                  onClick={() => setFeedback(null)}
+                  style={{ cursor: "pointer" }}
+                  title="Click to dismiss"
+                >
+                  {feedback.type === "success" ? <CheckCircle2 size={18} /> : <AlertCircle size={18} />}
+                  <span>{feedback.text}</span>
+                </div>
+              )}
+
               <div className="primary-decision-buttons">
                 {/* Approve Sanction */}
                 <button
